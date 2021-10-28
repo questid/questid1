@@ -115,7 +115,7 @@ def start_buytrade(buy_amt, except_items):
                 # --------------------------------------------------------------
 
                 # if rsi_val and mfi_val and ocl_val: 주석처리함 필요할때 사용
-                if rsi_val :
+                if ocl_val :
                     logging.info('매수대상 발견....[' + str(target_item['market']) + ']')
                     logging.info(indicators_data[0])
                     logging.info(indicators_data[1])
