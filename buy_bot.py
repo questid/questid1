@@ -50,7 +50,7 @@ def start_buytrade(buy_amt, except_items):
                 # 종목별 보조지표를 조회
                 # 1. 조회 기준 : 일캔들, 최근 5개 지표 조회
                 # --------------------------------------------------------------
-                indicators_data = upbit.get_indicators(target_item['market'], '60', 200, 5)
+                indicators_data = upbit.get_indicators(target_item['market'], '30', 200, 5)
 
                 # --------------------------------------------------------
                 # ------
