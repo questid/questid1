@@ -74,11 +74,11 @@ def start_buytrade(buy_amt, except_items):
                 # indicators_data[0][2]['RSI'] : 2일전
                 # indicators_data[0][3]['RSI'] : 3일전
                 # --------------------------------------------------------------
-                if (Decimal(str(indicators_data[0][0]['RSI'])) > Decimal(str(indicators_data[0][1]['RSI']))
-                        and Decimal(str(indicators_data[0][1]['RSI'])) > Decimal(str(indicators_data[0][2]['RSI']))
-                        and Decimal(str(indicators_data[0][3]['RSI'])) > Decimal(str(indicators_data[0][2]['RSI']))
-                        and Decimal(str(indicators_data[0][2]['RSI'])) < Decimal(str(30))):
-                        rsi_val = True
+#                 if (Decimal(str(indicators_data[0][0]['RSI'])) > Decimal(str(indicators_data[0][1]['RSI']))
+#                         and Decimal(str(indicators_data[0][1]['RSI'])) > Decimal(str(indicators_data[0][2]['RSI']))
+#                         and Decimal(str(indicators_data[0][3]['RSI'])) > Decimal(str(indicators_data[0][2]['RSI']))
+#                         and Decimal(str(indicators_data[0][2]['RSI'])) < Decimal(str(30))):
+#                         rsi_val = True
 
                 # # --------------------------------------------------------------
                 # # MFI : 2일전 < 20미만, 3일전 > 2일전, 1일전 > 2일전, 현재 > 1일전
@@ -102,13 +102,13 @@ def start_buytrade(buy_amt, except_items):
                #  indicators_data[2][3]['OCL'] : 3일전
                #  --------------------------------------------------------------
 
-                # if (Decimal(str(indicators_data[2][0]['OCL'])) > Decimal(str(indicators_data[2][1]['OCL']))
-                #         and Decimal(str(indicators_data[2][1]['OCL'])) > Decimal(str(indicators_data[2][2]['OCL']))
-                #         and Decimal(str(indicators_data[2][3]['OCL'])) > Decimal(str(indicators_data[2][2]['OCL']))
-                #         and Decimal(str(indicators_data[2][1]['OCL'])) < Decimal(str(0))
-                #         and Decimal(str(indicators_data[2][2]['OCL'])) < Decimal(str(0))
-                #         and Decimal(str(indicators_data[2][3]['OCL'])) < Decimal(str(0))):
-                #     ocl_val = True
+                if (Decimal(str(indicators_data[2][0]['OCL'])) > Decimal(str(indicators_data[2][1]['OCL']))
+                        and Decimal(str(indicators_data[2][1]['OCL'])) > Decimal(str(indicators_data[2][2]['OCL']))
+                        and Decimal(str(indicators_data[2][3]['OCL'])) > Decimal(str(indicators_data[2][2]['OCL']))
+                        and Decimal(str(indicators_data[2][1]['OCL'])) < Decimal(str(0))
+                        and Decimal(str(indicators_data[2][2]['OCL'])) < Decimal(str(0))
+                        and Decimal(str(indicators_data[2][3]['OCL'])) < Decimal(str(0))):
+                    ocl_val = True
 
                 # --------------------------------------------------------------
                 # 매수대상 발견
